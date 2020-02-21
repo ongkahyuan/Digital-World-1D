@@ -49,8 +49,8 @@ class pyrebase_IO():
             - child2: Node name, sublevel 2""" 
     
         if child1 == None and child2 == None:
-            return self.db.child(str(key)).get(self.user['idToken'])
+            return self.db.child(str(key)).get(self.user['idToken']).val()
         elif child2 == None:
-            return self.db.child(str(key)).child(str(child1)).get(self.user['idToken'])
+            return self.db.child(str(key)).child(str(child1)).get(self.user['idToken']).val()
         else:
-            return self.db.child(str(key)).child(str(child1)).child(str(child2)).get(self.user['idToken'])
+            return self.db.child(str(key)).child(str(child1)).child(str(child2)).get(self.user['idToken']).val()
