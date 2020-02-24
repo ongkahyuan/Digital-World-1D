@@ -9,3 +9,4 @@ class room_brightness:
                 -Checks if there are people hogging the room. Returns True or False.
     """
     pass
+print ("I am Potato")
