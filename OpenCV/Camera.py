@@ -31,14 +31,19 @@ class room_brightness:
 #         print('>> Average Brightness: {}'.format(avg_maxval))
         return avg_maxval
 
-print(check_brightness())
+#-----------------Get brightness value------------------
+# b=room_brightness 
+#-----------------Print brightness Value-----------------
+# print(b.check_brightness()) 
 
 def Check_light_state():
-    if check_brightness() >= 50:
+    b= room_brightness
+    if b.check_brightness() >= 50:
         a = True
-        return "Lights in the Room are 'ON'"
-    elif check_brightness() < 50:
+        # return "Lights in the Room are 'ON'"
+    elif b.check_brightness() < 50:
         a = False
-        return "Lights in the Room are 'OFF'"
-        
+        # return "Lights in the Room are 'OFF'"
+    return a
+         
 print(Check_light_state())

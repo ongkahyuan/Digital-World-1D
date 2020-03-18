@@ -46,14 +46,15 @@ class room_brightness: # Creating class
         cv2.imshow('img', img)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
-
-print(check_brightness())
+b=room_brightness
+print(b.check_brightness())
 
 def Check_light_state():
-    if check_brightness() >= 50:
+    b= room_brightness
+    if b.check_brightness() >= 50:
         a = True
         return "Lights in the Room are 'ON'"
-    elif check_brightness() < 50:
+    elif b.check_brightness() < 50:
         a = False
         return "Lights in the Room are 'OFF'"
          
